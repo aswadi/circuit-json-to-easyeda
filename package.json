@@ -1,0 +1,37 @@
+{
+  "name": "circuit-json-to-easyeda",
+  "version": "0.0.1",
+  "description": "Convert Circuit JSON schematics and PCBs to typed EasyEDA Standard documents",
+  "type": "module",
+  "module": "lib/index.ts",
+  "types": "lib/index.ts",
+  "exports": {
+    ".": "./lib/index.ts"
+  },
+  "files": ["lib"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tscircuit/circuit-json-to-easyeda"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "lint": "biome check .",
+    "check": "bun run format:check && bun run typecheck && bun test"
+  },
+  "dependencies": {
+    "circuit-json": "^0.0.465",
+    "easyedats": "https://github.com/tscircuit/easyedats/archive/1cf835f1701c10526c788865e239bdbcaa5db400.tar.gz"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.7",
+    "@types/bun": "latest",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules
+bun.lock
+dist
+coverage
+*.tgz
+*.tsbuildinfo
+__diff_output__
+.DS_Store
+.idea
+.cursor
+.env
+.env.*.local
